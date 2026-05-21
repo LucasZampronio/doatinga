@@ -1,0 +1,85 @@
+.catalogo__container {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+  padding: 20px;
+  background-color: #f3f4f6;
+  min-height: 100vh;
+}
+
+/* ======== FILTROS ======== */
+.catalogo__filtros {
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.catalogo__filtros h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.filtro {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filtro label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.filtro select {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 6px;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.85rem;
+}
+
+/* ======== CONTEÚDO ======== */
+.catalogo__conteudo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.catalogo__busca {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: white;
+  border-radius: 999px;
+  padding: 8px 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.catalogo__busca input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+}
+
+.catalogo__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+/* ======== RESPONSIVO ======== */
+@media (max-width: 900px) {
+  .catalogo__container {
+    grid-template-columns: 1fr;
+  }
+}

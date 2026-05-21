@@ -1,0 +1,101 @@
+.auth-aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    width: 40%;
+    padding: 20px; 
+    /* Certifique-se de que o 'aside' tem altura suficiente para que 'top-content' fique no topo */
+    height: 100vh; /* Ou um height fixo, se o aside não for ocupar a tela inteira */
+    box-sizing: border-box; /* Garante que padding não adicione à altura/largura total */
+}
+
+.auth-aside-top-content {
+    display: flex; 
+    justify-content: flex-end; /* Alinha para a direita */
+    align-items: flex-start; /* 🎯 Alinha os itens para o TOPO do container */
+    width: 100%; 
+    padding: 10px; /* Adiciona um padding geral para dar um respiro dos cantos */
+    /* background-color: lightblue; /* Remova isso depois, é só para depuração */
+}
+
+.auth-aside-main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-grow: 1; /* Permite que o conteúdo principal ocupe o espaço restante */
+    padding-bottom: 20px; /* Para dar respiro na parte inferior do botão */
+}
+
+.auth-aside-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 125px;
+  color: rgb(241, 238, 238); 
+}
+
+.auth-aside-subtitle {
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 250px;
+  margin-top: 10px;
+  color: rgb(241, 238, 238);
+}
+
+
+.auth-aside.green {
+  background-color: #86C479;
+}
+.auth-aside.orange {
+  background-color: #FABB52;
+}
+
+/*variante de cor de texto, acho q nao vai precisar de outra*/
+.auth-aside.light {
+  color: rgb(241, 238, 238); 
+}
+
+
+.btn-primary {
+  background-color: #FABB52; 
+  color: white;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 180px;
+  transition: all 0.2s ease;
+  border: 2px solid white;
+  margin-top: 80px;
+}
+
+/*primario é da coluna laranja*/
+.btn-primary:hover {
+  background-color: white;
+  color: #FABB52; 
+  border: 2px solid #FABB52;
+}
+
+/*secundário é o da coluda verde*/
+.btn-secondary {
+  background-color: #86C479;
+  color: white;
+  border: 2px solid white;
+  padding: 0.9rem 1.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 180px;
+  margin-top: 90px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: #86C479;
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nome": "Carrinho de brinquedo",
+    "imagem": "/imgs/carrinho.png",
+    "instituicao": "Abrigo da Sopa",
+    "endereco": "Av. Senador Salgado Filho, 123 - Restinga",
+    "status": "nova_doacao",
+    "tipo": "Brinquedo",
+    "disponibilidade": "disponivel",
+    "turno": "tarde",
+    "bairro": "Restinga"
+  },
+  {
+    "id": 2,
+    "nome": "Cobertor de casal",
+    "imagem": "/imgs/cobertor.png",
+    "instituicao": "Lar Esperança",
+    "endereco": "Rua Bento Gonçalves, 89 - Partenon",
+    "status": "recem_chegado",
+    "tipo": "Roupa",
+    "disponibilidade": "precisa",
+    "turno": "manha",
+    "bairro": "Partenon"
+  },
+  {
+    "id": 3,
+    "nome": "Pacote de fraldas",
+    "imagem": "/imgs/fraldas.png",
+    "instituicao": "Creche Bem Viver",
+    "endereco": "Rua das Laranjeiras, 200 - Cristal",
+    "status": "nova_doacao",
+    "tipo": "Higiene",
+    "disponibilidade": "disponivel",
+    "turno": "integral",
+    "bairro": "Cristal"
+  }
+]

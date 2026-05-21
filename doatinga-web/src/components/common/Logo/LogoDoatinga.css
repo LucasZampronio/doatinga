@@ -1,0 +1,57 @@
+
+.logo {
+  display: flex;
+  align-items: center; 
+  gap: 10px; 
+  background-color: transparent; 
+  flex-shrink: 0; 
+  /* Remover qualquer margin/padding que possa estar empurrando a logo */
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.imagem img {
+  width: 70px;
+  height: auto; 
+  object-fit: contain;
+  margin-bottom: 15px;
+  align-items: center;
+  background-color: transparent;
+}
+
+.texto {
+  padding-left: 15px;
+  color: black;
+  font-family: 'Lexend', sans-serif;
+  color: #42586F;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.texto h1 {
+  color: #42586F;
+  font-size: 24px; 
+  margin-bottom: 0; 
+}
+
+.texto p {
+  font-size: 14px; 
+  color: #42586F;
+  line-height: 1.2em; 
+  margin-top: 0; 
+  font-size: 10px;
+}
+
+
+.logo-right {
+  margin-left: auto; 
+  margin-right: 0;
+}
+
+.logo-left {
+  
+  margin-right: auto;
+  margin-left: 0;
+}

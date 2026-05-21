@@ -1,0 +1,37 @@
+.input-field-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: #D9D9D9;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+.input-icon {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.input-icon img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.input-field {
+    border: none;          
+    outline: none;         
+    background: #D9D9D9; 
+    padding: 6px 15px;
+    font-size: 1rem;       
+    color: #333;
+}
+
+.input-field::placeholder {
+  color: #5c5c5c; 
+}

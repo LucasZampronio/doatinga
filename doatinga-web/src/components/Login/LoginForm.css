@@ -1,0 +1,46 @@
+
+.login-form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+    gap: 1.5rem;            
+    width: 60vw;
+    height:100vh;
+    max-width: 400px;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.login-form-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #F3922B; 
+    margin-bottom: 1.5rem;
+}
+
+.login-form .input-field-container,
+.register-form {
+    width: 100%;
+    display: flex;
+    padding: 1rem;
+}
+
+.btn-login {
+    background-color: #FABB52; 
+    color: white; 
+    font-weight: 600;
+    font-size: 1rem;
+    border: 1px solid #F3922B;
+    padding: 1rem;
+    width: 250px; 
+    margin-top: 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 60px;
+}
+
+.btn-login:hover {
+    background-color: #F3922B;
+}
