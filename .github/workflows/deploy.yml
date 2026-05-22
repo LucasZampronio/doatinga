@@ -33,7 +33,7 @@ jobs:
             git reset --hard origin/master
             
             # Sobe o Doatinga
-            sudo docker-compose up -d --build
+            sudo docker compose up -d --build
             
             # Limpeza para não estourar o disco da Oracle (que é pequeno)
             sudo docker system prune -f
