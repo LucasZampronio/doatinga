@@ -18,7 +18,7 @@ services:
     container_name: doatinga-api
     restart: always
     ports:
-      - "3001:3000"
+      - "3005:3000"
     environment:
       - DB_HOST=db
       - DB_PORT=5432
@@ -36,7 +36,7 @@ services:
     container_name: doatinga-web
     restart: always
     ports:
-      - "5173:5173"
+      - "5174:5173"
     depends_on:
       - api
 
