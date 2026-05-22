@@ -32,8 +32,8 @@ jobs:
             git fetch origin master
             git reset --hard origin/master
             
-            # Opcional: Parar outros containers específicos se quiser economizar RAM
-            # sudo docker stop $(sudo docker ps -q) || true 
+            # Parar TODOS os containers para liberar a porta 80 e economizar RAM
+            sudo docker stop $(sudo docker ps -q) || true 
 
             # Sobe o Doatinga
             sudo docker-compose up -d --build
