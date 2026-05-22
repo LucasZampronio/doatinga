@@ -1,0 +1,44 @@
+.legendContainer {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: white;
+    padding: 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    min-width: 180px;
+}
+
+.legendContainer h4 {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.legendItem:last-child {
+    margin-bottom: 0;
+}
+
+.iconCircle {
+    width: 32px;
+    height: 32px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.legendItem span {
+    font-size: 0.85rem;
+    color: #666;
+}

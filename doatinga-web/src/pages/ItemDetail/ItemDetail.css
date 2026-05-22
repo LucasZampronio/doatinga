@@ -1,0 +1,177 @@
+.item-detail-page {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.item-detail-content {
+    padding: 3rem 2rem;
+}
+
+.item-detail-content .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn-back-catalog {
+    background-color: #FABB52; 
+    color: white; 
+    font-weight: 600;
+    font-size: 1rem;
+    border: 1px solid #F3922B;
+    padding: 1rem;
+    width: 250px; 
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-bottom: 2rem;
+}
+
+.btn-back-catalog:hover {
+    background-color: #F3922B;
+}
+
+.item-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+/* Imagem */
+.item-image-section .image-card {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: #f5f5f5;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.item-image-section .image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.placeholder-big {
+    font-size: 6rem;
+}
+
+/* Informações */
+.item-info-section h1 {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    color: #333;
+}
+
+.description {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.badge-row {
+    display: flex;
+    gap: 0.8rem;
+}
+
+.badge {
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+
+.badge-needed {
+    background-color: #86c479;
+    color: white;
+}
+
+.badge-available {
+    background-color: #406db0;
+    color: white;
+}
+
+.info-block {
+    margin-bottom: 2.5rem;
+}
+
+.info-title {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.info-title h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.institution-name {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #406db0;
+    margin-bottom: 0.5rem;
+}
+
+.address {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.opening-list {
+    list-style: none;
+    padding: 0;
+}
+
+.opening-list li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.6rem;
+    padding-left: 0.5rem;
+}
+
+.requirements-block {
+    background-color: #fff9ed;
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 6px solid #fabb52;
+}
+
+.requirements-block p {
+    color: #856404;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.loading-state, .error-state {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #666;
+}
+
+@media (max-width: 900px) {
+    .item-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding: 2.5rem;
+    }
+    
+    .item-info-section h1 {
+        font-size: 2.2rem;
+    }
+}

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import InputField from '../common/InputTemplate/InputField';
 import Button from '../common/Button';
+import RecoverAccountModal from './RecoverAccountModal';
 import './LoginForm.css';
 import api from '../../services/api.js';
 import { toast } from 'sonner';
@@ -14,6 +15,7 @@ import passwordIcon from '../../assets/yellowPasswordIcon.png';
 function LoginForm() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
@@ -38,33 +40,48 @@ function LoginForm() {
     }
 
         return (
-            <form className = 'login-form' onSubmit = {handleSubmit}>
-                <h2 className = 'login-form-title'>Bem Vindo de Volta!</h2>
-                    <InputField
-                        iconSrc = {emailIcon}
-                        iconAlt = 'Ícone de email'
-                        type = 'email'
-                        placeholder= 'Email'
-                        value = {email}
-                        onChange = {(e) => setEmail(e.target.value)}
-                        required = {true}
-                    />
-                    <InputField
-                        iconSrc = {passwordIcon}
-                        iconAlt = 'Ícone de senha'
-                        type = 'password'
-                        placeholder= 'Senha'
-                        value = {password}
-                        onChange = {(e) => setPassword(e.target.value)}
-                        required = {true}
-                    />
-                <Button
-                    type = 'submit'
-                    className = 'btn-login'
-                >
-                    Login
-                </Button>                    
-            </form>
+            <>
+                <form className = 'login-form' onSubmit = {handleSubmit}>
+                    <h2 className = 'login-form-title'>Bem Vindo de Volta!</h2>
+                        <InputField
+                            iconSrc = {emailIcon}
+                            iconAlt = 'Ícone de email'
+                            type = 'email'
+                            placeholder= 'Email'
+                            value = {email}
+                            onChange = {(e) => setEmail(e.target.value)}
+                            required = {true}
+                        />
+                        <InputField
+                            iconSrc = {passwordIcon}
+                            iconAlt = 'Ícone de senha'
+                            type = 'password'
+                            placeholder= 'Senha'
+                            value = {password}
+                            onChange = {(e) => setPassword(e.target.value)}
+                            required = {true}
+                        />
+                    
+                    <span 
+                        className="forgot-password-link" 
+                        onClick={() => setIsModalOpen(true)}
+                    >
+                        Esqueci minha senha
+                    </span>
+
+                    <Button
+                        type = 'submit'
+                        className = 'btn-login'
+                    >
+                        Login
+                    </Button>                    
+                </form>
+
+                <RecoverAccountModal 
+                    isOpen={isModalOpen} 
+                    onClose={() => setIsModalOpen(false)} 
+                />
+            </>
         );
 }
 

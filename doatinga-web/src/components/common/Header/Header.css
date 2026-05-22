@@ -59,10 +59,60 @@
 
 }
 
+.HeaderNav ul li a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+.HeaderNav ul li a:hover {
+    color: #FABB52;
+}
+
 .HeaderInstituicao a {
-    margin: 0;
-    font-weight: 500;
-    color: #151515;
+    text-decoration: none;
+    background-color: #406db0;
+    color: white !important;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.HeaderInstituicao a:hover {
+    background-color: #32578c;
+}
+
+.HeaderUserActions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.HeaderProfileIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.HeaderProfileIcon:hover {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+.btn-logout {
+    background-color: #406db0;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
     font-size: 18px;
     cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-logout:hover {
+    background-color: #32578c;
 }

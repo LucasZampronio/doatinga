@@ -7,6 +7,8 @@ donationRouter.post("/", donationsController.post);
 
 donationRouter.get("/", donationsController.getAll);
 
+donationRouter.get("/item/:id", donationsController.getDetailsById);
+
 donationRouter.get("/:idInstitution", donationsController.getByInstitution);
 
 donationRouter.get("/:idInstitution/:id", donationsController.getById);

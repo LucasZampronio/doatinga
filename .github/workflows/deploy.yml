@@ -1,0 +1,35 @@
+name: Deploy to Oracle VM
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to Oracle VM via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
+          script: |
+            # Navegar até a pasta do projeto (ajuste o caminho se necessário)
+            cd ~/doatinga || git clone https://github.com/${{ github.repository }} ~/doatinga
+            cd ~/doatinga
+            
+            # Garantir que estamos na branch correta e atualizados
+            git checkout master
+            git pull origin master
+            
+            # Subir o ambiente usando Docker Compose
+            # O flag --build garante que as imagens sejam reconstruídas com o código novo
+            sudo docker-compose up -d --build
+            
+            # Limpar imagens órfãs para economizar espaço na VM
+            sudo docker image prune -f

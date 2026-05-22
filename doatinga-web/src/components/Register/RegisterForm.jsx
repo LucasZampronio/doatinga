@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import InputField from '../common/InputTemplate/InputField.jsx';
 import Button from '../common/Button.jsx';
 import './RegisterForm.css';
@@ -14,27 +15,26 @@ function RegisterForm() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const navigate = useNavigate();
     const isDisabled = !name || !password || !email;
 
     const handleSubmit = async (event) => {
         event.preventDefault();
 
         try {
-
-            await api.post("/users/signup", { name, email, password });
-            toast.success("Cadastro bem sucedido!")
-
+            const response = await api.post("/users/signup", { name, email, password });
+            
+            if (response.data && response.data.token) {
+                localStorage.setItem('authToken', response.data.token);
+                toast.success("Cadastro realizado com sucesso!");
+                navigate('/');
+            } else {
+                toast.success("Cadastro realizado! Por favor, faça login.");
+                navigate('/login');
+            }
         } catch (error) {
-
-            console.log("ERRO FRONT:", error);
+            toast.error("Erro ao cadastrar: " + (error.response?.data?.message || error.message));
         }
-
-        console.log('Dados do Formulário: ');
-        console.log({
-            name: name,
-            email: email,
-            password: password
-        });
     }
     return (
         <form className="register-form" onSubmit={handleSubmit}>

@@ -1,6 +1,6 @@
 import ifLogo from '../../../assets/logo-ifrs 1.svg';
 import coracao from '../../../assets/Coracao.svg';
-import email from '../../../assets/email.svg';
+import email from '../../../assets/Email.svg';
 import LogoDoatinga from '../Logo/LogoDoatinga';
 import './Footer.css';
 
