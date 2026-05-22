@@ -19,15 +19,27 @@
 .map-section {
     flex: 1;
     position: relative;
+    min-height: 400px;
 }
 
 @media (max-width: 768px) {
+    .home-page {
+        height: auto;
+    }
+
     .map-sidebar-layout {
         flex-direction: column;
+        overflow: visible;
     }
     
-    .institution-sidebar {
-        width: 100%;
-        height: 300px;
+    .map-section {
+        height: 50vh;
+        min-height: 300px;
+    }
+
+    /* O componente sidebar tem o estilo interno, aqui garantimos a largura */
+    .map-sidebar-layout > aside {
+        width: 100% !important;
+        height: 400px !important;
     }
 }

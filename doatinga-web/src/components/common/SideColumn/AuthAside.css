@@ -57,6 +57,27 @@
   color: rgb(241, 238, 238); 
 }
 
+@media (max-width: 900px) {
+    .auth-aside {
+        width: 100%;
+        height: auto;
+        padding: 3rem 1rem;
+    }
+
+    .auth-aside-title {
+        margin-top: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .auth-aside-top-content {
+        display: none; /* Logo já aparece no Header ou form */
+    }
+
+    .btn-primary, .btn-secondary {
+        margin-top: 2rem;
+    }
+}
+
 
 .btn-primary {
   background-color: #FABB52; 

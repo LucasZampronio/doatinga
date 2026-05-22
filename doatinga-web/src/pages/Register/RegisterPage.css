@@ -1,6 +1,7 @@
 .register-page-container {
     display: flex;
     flex-direction: row;
+    min-height: 100vh;
 }
 
 .form-section {
@@ -8,4 +9,15 @@
     flex-grow: 1; 
     justify-content: center;
     align-items: center;
+    padding: 2rem;
+}
+
+@media (max-width: 900px) {
+    .register-page-container {
+        flex-direction: column;
+    }
+
+    .form-section {
+        padding: 1rem;
+    }
 }

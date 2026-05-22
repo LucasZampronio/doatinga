@@ -116,3 +116,46 @@
 .btn-logout:hover {
     background-color: #32578c;
 }
+
+/* RESPONSIVIDADE MOBILE */
+@media (max-width: 900px) {
+    .Header {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .HeaderBarra {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .LogoTexto {
+        margin-top: 0;
+    }
+
+    .HeaderNav {
+        width: 100%;
+    }
+
+    .HeaderNav ul {
+        margin-left: 0;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .HeaderNav ul li {
+        font-size: 16px;
+    }
+
+    .HeaderInstituicao {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .HeaderUserActions {
+        gap: 1rem;
+    }
+}

@@ -172,9 +172,21 @@
     .catalogo-container {
         grid-template-columns: 1fr;
         padding: 0 1rem;
+        gap: 1.5rem;
     }
     
     .catalogo-sidebar {
-        display: none;
+        display: block;
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .catalogo-banner .container {
+        padding: 0 1.5rem;
+    }
+
+    .catalogo-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1.5rem;
     }
 }

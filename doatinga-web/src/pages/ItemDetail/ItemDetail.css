@@ -164,14 +164,29 @@
     color: #666;
 }
 
+/* RESPONSIVIDADE MOBILE */
 @media (max-width: 900px) {
+    .item-detail-content {
+        padding: 1.5rem 1rem;
+    }
+
     .item-grid {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
-        padding: 2.5rem;
+        gap: 2rem;
+        padding: 1.5rem;
+        border-radius: 12px;
     }
     
     .item-info-section h1 {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
+    }
+
+    .btn-back-catalog {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .requirements-block {
+        padding: 1rem;
     }
 }

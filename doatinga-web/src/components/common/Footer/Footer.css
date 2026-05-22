@@ -93,3 +93,30 @@
 .Footer__bottom p {
     margin: 0;
 }
+
+/* RESPONSIVIDADE MOBILE */
+@media (max-width: 768px) {
+    .Footer__content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+
+    .Footer__brand,
+    .Footer__links,
+    .Footer__contact,
+    .Footer__partner {
+        width: 100%;
+        padding: 0;
+    }
+
+    .Footer__partner {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .Footer__contact ul li {
+        justify-content: center;
+    }
+}
